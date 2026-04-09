@@ -2,13 +2,13 @@
 Library     SeleniumLibrary
 Resource    ../Resources/AddToCartKeywords.robot
 *** Variables ***
-${Browser}      chrome
+${Browser}      headlesschrome
 ${firstname}    Shivangi
 ${lastname}     Sahu
 ${postalcode}   411067
 
 *** Test Cases ***
-Valid Login Test
+Shopping Cart Update
         Open SauceLab Browser    ${Browser}
         ${username}    ${password}=    Get Credentials From Page
         Enter Username    ${username}
