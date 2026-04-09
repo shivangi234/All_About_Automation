@@ -1,6 +1,6 @@
 import requests
 import time
-import random  # added
+import random
 
 BASE_URL = "http://dummy.restapiexample.com/api/v1"
 
@@ -15,7 +15,6 @@ def test_get_employee_by_id(employee_id, retries=5, delay=5):
         try:
             response = requests.get(url, headers=headers, timeout=10)
 
-            # Better delay calculation (only change)
             wait_time = delay * (2 ** (attempt - 1)) + random.uniform(0, 2)
 
             # Handle 429

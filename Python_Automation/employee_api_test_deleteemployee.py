@@ -4,9 +4,7 @@ import time
 BASE_URL = "http://dummy.restapiexample.com/api/v1"
 
 def test_delete_employee(employee_id, retries=5, delay=5):
-    """
-    Automate deleting an employee and verify the response.
-    """
+
     url = f"{BASE_URL}/delete/{employee_id}"
     headers = {
         "Accept": "application/json, text/plain, */*",

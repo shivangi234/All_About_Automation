@@ -1,5 +1,5 @@
 *** Settings ***
-Resource         ../PageObjects/EmployeeAPI.robot
+Resource        ../Resources/EmployeeAPIKeywords.robot
 
 *** Test Cases ***
 Verify Get All Users

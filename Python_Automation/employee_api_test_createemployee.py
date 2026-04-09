@@ -4,9 +4,7 @@ import time
 BASE_URL = "http://dummy.restapiexample.com/api/v1"
 
 def test_create_employee(name, salary, age, retries=5, delay=5):
-    """
-    Automate creation of a new employee and verify response.
-    """
+
     url = f"{BASE_URL}/create"
     headers = {
         "Accept": "application/json, text/plain, */*",

@@ -4,10 +4,7 @@ import time
 BASE_URL = "http://dummy.restapiexample.com/api/v1"
 
 def test_update_employee(employee_id, name=None, salary=None, age=None, retries=5, delay=5):
-    """
-    Automate updating an employee and verify response.
-    Only fields provided (name, salary, age) will be updated.
-    """
+
     url = f"{BASE_URL}/update/{employee_id}"
     headers = {
         "Accept": "application/json, text/plain, */*",

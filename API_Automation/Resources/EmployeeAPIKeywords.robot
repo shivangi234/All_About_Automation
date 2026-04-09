@@ -1,6 +1,6 @@
 *** Settings ***
-Library           RequestsLibrary
-Variables         ../Resources/variables.py
+Library     RequestsLibrary
+Resource    ../PageObjects/Locators.robot
 
 *** Keywords ***
 Init API Session

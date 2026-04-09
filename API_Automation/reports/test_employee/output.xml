@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.14.3 on win32)" generated="2026-04-09T15:52:46.855320" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Employee" source="C:\Users\shivangi.sahu\PycharmProjects\PythonProject\TaskSuma\API_Automation\TestCases\test_employee.robot">
+<test id="s1-t1" name="Verify Get All Users" line="5">
+<kw name="Init API Session" owner="EmployeeAPIKeywords">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2026-04-09T15:52:47.751945" level="INFO">Creating Session using : alias=api, url=http://jsonplaceholder.typicode.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>${session_name}</arg>
+<arg>${BASE_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2026-04-09T15:52:47.751517" elapsed="0.000812"/>
+</kw>
+<status status="PASS" start="2026-04-09T15:52:47.750138" elapsed="0.002457"/>
+</kw>
+<kw name="Get All Users" owner="EmployeeAPIKeywords">
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2026-04-09T15:52:47.979078" level="INFO">GET Request : url=http://jsonplaceholder.typicode.com/users 
+ path_url=/users 
+ headers={'User-Agent': 'python-requests/2.33.1', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2026-04-09T15:52:47.979376" level="INFO">GET Response : url=http://jsonplaceholder.typicode.com/users 
+ status=200, reason=OK 
+ headers={'Date': 'Thu, 09 Apr 2026 10:22:47 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '1847', 'Connection': 'keep-alive', 'Access-Control-Allow-Credentials': 'true', 'Cache-Control': 'max-age=43200', 'Content-Encoding': 'gzip', 'etag': 'W/"160d-1eMSsxeJRfnVLRBmYJSbCiJZ1qQ"', 'expires': '-1', 'Nel': '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}', 'Pragma': 'no-cache', 'Report-To': '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=10Ca5AHTZ4jzxPcOPdeYi8rKkNQuIlcIPXP5%2BBSKTbA%3D\\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\\u0026ts=1775543166"}],"max_age":3600}', 'Reporting-Endpoints': 'heroku-nel="https://nel.heroku.com/reports?s=10Ca5AHTZ4jzxPcOPdeYi8rKkNQuIlcIPXP5%2BBSKTbA%3D&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;ts=1775543166"', 'Server': 'cloudflare', 'Vary': 'Origin, Accept-Encoding', 'Via': '1.1 heroku-router', 'X-Content-Type-Options': 'nosniff', 'X-Powered-By': 'Express', 'X-Ratelimit-Limit': '1000', 'X-Ratelimit-Remaining': '999', 'X-Ratelimit-Reset': '1775543169', 'Age': '13300', 'Accept-Ranges': 'bytes', 'cf-cache-status': 'HIT', 'CF-RAY': '9e98caedcc191211-BOM', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body=[
+  {
+    "id": 1,
+    "name": "Leanne Graham",
+    "username": "Bret",
+    "email": "Sincere@april.biz",
+    "address": {
+      "street": "Kulas Light",
+      "suite": "Apt. 556",
+      "city": "Gwenborough",
+      "zipcode": "92998-3874",
+      "geo": {
+        "lat": "-37.3159",
+        "lng": "81.1496"
+      }
+    },
+    "phone": "1-770-736-8031 x56442",
+    "website": "hildegard.org",
+    "company": {
+      "name": "Romaguera-Crona",
+      "catchPhrase": "Multi-layered client-server neural-net",
+      "bs": "harness real-time e-markets"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Ervin Howell",
+    "username": "Antonette",
+    "email": "Shanna@melissa.tv",
+    "address": {
+      "street": "Victor Plains",
+      "suite": "Suite 879",
+      "city": "Wisokyburgh",
+      "zipcode": "90566-7771",
+      "geo": {
+        "lat": "-43.9509",
+        "lng": "-34.4618"
+      }
+    },
+    "phone": "010-692-6593 x09125",
+    "website": "anastasia.net",
+    "company": {
+      "name": "Deckow-Crist",
+      "catchPhrase": "Proactive didactic contingency",
+      "bs": "synergize scalable supply-chains"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Clementine Bauch",
+    "username": "Samantha",
+    "email": "Nathan@yesenia.net",
+    "address": {
+      "street": "Douglas Extension",
+      "suite": "Suite 847",
+      "city": "McKenziehaven",
+      "zipcode": "59590-4157",
+      "geo": {
+        "lat": "-68.6102",
+        "lng": "-47.0653"
+      }
+    },
+    "phone": "1-463-123-4447",
+    "website": "ramiro.info",
+    "company": {
+      "name": "Romaguera-Jacobson",
+      "catchPhrase": "Face to face bifurcated interface",
+      "bs": "e-enable strategic applications"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Patricia Lebsack",
+    "username": "Karianne",
+    "email": "Julianne.OConner@kory.org",
+    "address": {
+      "street": "Hoeger Mall",
+      "suite": "Apt. 692",
+      "city": "South Elvis",
+      "zipcode": "53919-4257",
+      "geo": {
+        "lat": "29.4572",
+        "lng": "-164.2990"
+      }
+    },
+    "phone": "493-170-9623 x156",
+    "website": "kale.biz",
+    "company": {
+      "name": "Robel-Corkery",
+      "catchPhrase": "Multi-tiered zero tolerance productivity",
+      "bs": "transition cutting-edge web services"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Chelsey Dietrich",
+    "username": "Kamren",
+    "email": "Lucio_Hettinger@annie.ca",
+    "address": {
+      "street": "Skiles Walks",
+      "suite": "Suite 351",
+      "city": "Roscoeview",
+      "zipcode": "33263",
+      "geo": {
+        "lat": "-31.8129",
+        "lng": "62.5342"
+      }
+    },
+    "phone": "(254)954-1289",
+    "website": "demarco.info",
+    "company": {
+      "name": "Keebler LLC",
+      "catchPhrase": "User-centric fault-tolerant solution",
+      "bs": "revolutionize end-to-end systems"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Mrs. Dennis Schulist",
+    "username": "Leopoldo_Corkery",
+    "email": "Karley_Dach@jasper.info",
+    "address": {
+      "street": "Norberto Crossing",
+      "suite": "Apt. 950",
+      "city": "South Christy",
+      "zipcode": "23505-1337",
+      "geo": {
+        "lat": "-71.4197",
+        "lng": "71.7478"
+      }
+    },
+    "phone": "1-477-935-8478 x6430",
+    "website": "ola.org",
+    "company": {
+      "name": "Considine-Lockman",
+      "catchPhrase": "Synchronised bottom-line interface",
+      "bs": "e-enable innovative applications"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Kurtis Weissnat",
+    "username": "Elwyn.Skiles",
+    "email": "Telly.Hoeger@billy.biz",
+    "address": {
+      "street": "Rex Trail",
+      "suite": "Suite 280",
+      "city": "Howemouth",
+      "zipcode": "58804-1099",
+      "geo": {
+        "lat": "24.8918",
+        "lng": "21.8984"
+      }
+    },
+    "phone": "210.067.6132",
+    "website": "elvis.io",
+    "company": {
+      "name": "Johns Group",
+      "catchPhrase": "Configurable multimedia task-force",
+      "bs": "generate enterprise e-tailers"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Nicholas Runolfsdottir V",
+    "username": "Maxime_Nienow",
+    "email": "Sherwood@rosamond.me",
+    "address": {
+      "street": "Ellsworth Summit",
+      "suite": "Suite 729",
+      "city": "Aliyaview",
+      "zipcode": "45169",
+      "geo": {
+        "lat": "-14.3990",
+        "lng": "-120.7677"
+      }
+    },
+    "phone": "586.493.6943 x140",
+    "website": "jacynthe.com",
+    "company": {
+      "name": "Abernathy Group",
+      "catchPhrase": "Implemented secondary concept",
+      "bs": "e-enable extensible e-tailers"
+    }
+  },
+  {
+    "id": 9,
+    "name": "Glenna Reichert",
+    "username": "Delphine",
+    "email": "Chaim_McDermott@dana.io",
+    "address": {
+      "street": "Dayna Park",
+      "suite": "Suite 449",
+      "city": "Bartholomebury",
+      "zipcode": "76495-3109",
+      "geo": {
+        "lat": "24.6463",
+        "lng": "-168.8889"
+      }
+    },
+    "phone": "(775)976-6794 x41206",
+    "website": "conrad.com",
+    "company": {
+      "name": "Yost and Sons",
+      "catchPhrase": "Switchable contextually-based project",
+      "bs": "aggregate real-time technologies"
+    }
+  },
+  {
+    "id": 10,
+    "name": "Clementina DuBuque",
+    "username": "Moriah.Stanton",
+    "email": "Rey.Padberg@karina.biz",
+    "address": {
+      "street": "Kattie Turnpike",
+      "suite": "Suite 198",
+      "city": "Lebsackbury",
+      "zipcode": "31428-2261",
+      "geo": {
+        "lat": "-38.2386",
+        "lng": "57.2232"
+      }
+    },
+    "phone": "024-648-3804",
+    "website": "ambrose.net",
+    "company": {
+      "name": "Hoeger LLC",
+      "catchPhrase": "Centralized empowering task-force",
+      "bs": "target end-to-end models"
+    }
+  }
+] 
+ </msg>
+<msg time="2026-04-09T15:52:47.979886" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>${session_name}</arg>
+<arg>${ENDPOINT_ALL}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2026-04-09T15:52:47.754098" elapsed="0.225846"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2026-04-09T15:52:47.980094" elapsed="0.000102"/>
+</return>
+<msg time="2026-04-09T15:52:47.980494" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<status status="PASS" start="2026-04-09T15:52:47.753499" elapsed="0.227048"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2026-04-09T15:52:47.983018" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${response.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2026-04-09T15:52:47.981548" elapsed="0.001618"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-04-09T15:52:47.985926" level="INFO">[{'id': 1, 'name': 'Leanne Graham', 'username': 'Bret', 'email': 'Sincere@april.biz', 'address': {'street': 'Kulas Light', 'suite': 'Apt. 556', 'city': 'Gwenborough', 'zipcode': '92998-3874', 'geo': {'lat': '-37.3159', 'lng': '81.1496'}}, 'phone': '1-770-736-8031 x56442', 'website': 'hildegard.org', 'company': {'name': 'Romaguera-Crona', 'catchPhrase': 'Multi-layered client-server neural-net', 'bs': 'harness real-time e-markets'}}, {'id': 2, 'name': 'Ervin Howell', 'username': 'Antonette', 'email': 'Shanna@melissa.tv', 'address': {'street': 'Victor Plains', 'suite': 'Suite 879', 'city': 'Wisokyburgh', 'zipcode': '90566-7771', 'geo': {'lat': '-43.9509', 'lng': '-34.4618'}}, 'phone': '010-692-6593 x09125', 'website': 'anastasia.net', 'company': {'name': 'Deckow-Crist', 'catchPhrase': 'Proactive didactic contingency', 'bs': 'synergize scalable supply-chains'}}, {'id': 3, 'name': 'Clementine Bauch', 'username': 'Samantha', 'email': 'Nathan@yesenia.net', 'address': {'street': 'Douglas Extension', 'suite': 'Suite 847', 'city': 'McKenziehaven', 'zipcode': '59590-4157', 'geo': {'lat': '-68.6102', 'lng': '-47.0653'}}, 'phone': '1-463-123-4447', 'website': 'ramiro.info', 'company': {'name': 'Romaguera-Jacobson', 'catchPhrase': 'Face to face bifurcated interface', 'bs': 'e-enable strategic applications'}}, {'id': 4, 'name': 'Patricia Lebsack', 'username': 'Karianne', 'email': 'Julianne.OConner@kory.org', 'address': {'street': 'Hoeger Mall', 'suite': 'Apt. 692', 'city': 'South Elvis', 'zipcode': '53919-4257', 'geo': {'lat': '29.4572', 'lng': '-164.2990'}}, 'phone': '493-170-9623 x156', 'website': 'kale.biz', 'company': {'name': 'Robel-Corkery', 'catchPhrase': 'Multi-tiered zero tolerance productivity', 'bs': 'transition cutting-edge web services'}}, {'id': 5, 'name': 'Chelsey Dietrich', 'username': 'Kamren', 'email': 'Lucio_Hettinger@annie.ca', 'address': {'street': 'Skiles Walks', 'suite': 'Suite 351', 'city': 'Roscoeview', 'zipcode': '33263', 'geo': {'lat': '-31.8129', 'lng': '62.5342'}}, 'phone': '(254)954-1289', 'website': 'demarco.info', 'company': {'name': 'Keebler LLC', 'catchPhrase': 'User-centric fault-tolerant solution', 'bs': 'revolutionize end-to-end systems'}}, {'id': 6, 'name': 'Mrs. Dennis Schulist', 'username': 'Leopoldo_Corkery', 'email': 'Karley_Dach@jasper.info', 'address': {'street': 'Norberto Crossing', 'suite': 'Apt. 950', 'city': 'South Christy', 'zipcode': '23505-1337', 'geo': {'lat': '-71.4197', 'lng': '71.7478'}}, 'phone': '1-477-935-8478 x6430', 'website': 'ola.org', 'company': {'name': 'Considine-Lockman', 'catchPhrase': 'Synchronised bottom-line interface', 'bs': 'e-enable innovative applications'}}, {'id': 7, 'name': 'Kurtis Weissnat', 'username': 'Elwyn.Skiles', 'email': 'Telly.Hoeger@billy.biz', 'address': {'street': 'Rex Trail', 'suite': 'Suite 280', 'city': 'Howemouth', 'zipcode': '58804-1099', 'geo': {'lat': '24.8918', 'lng': '21.8984'}}, 'phone': '210.067.6132', 'website': 'elvis.io', 'company': {'name': 'Johns Group', 'catchPhrase': 'Configurable multimedia task-force', 'bs': 'generate enterprise e-tailers'}}, {'id': 8, 'name': 'Nicholas Runolfsdottir V', 'username': 'Maxime_Nienow', 'email': 'Sherwood@rosamond.me', 'address': {'street': 'Ellsworth Summit', 'suite': 'Suite 729', 'city': 'Aliyaview', 'zipcode': '45169', 'geo': {'lat': '-14.3990', 'lng': '-120.7677'}}, 'phone': '586.493.6943 x140', 'website': 'jacynthe.com', 'company': {'name': 'Abernathy Group', 'catchPhrase': 'Implemented secondary concept', 'bs': 'e-enable extensible e-tailers'}}, {'id': 9, 'name': 'Glenna Reichert', 'username': 'Delphine', 'email': 'Chaim_McDermott@dana.io', 'address': {'street': 'Dayna Park', 'suite': 'Suite 449', 'city': 'Bartholomebury', 'zipcode': '76495-3109', 'geo': {'lat': '24.6463', 'lng': '-168.8889'}}, 'phone': '(775)976-6794 x41206', 'website': 'conrad.com', 'company': {'name': 'Yost and Sons', 'catchPhrase': 'Switchable contextually-based project', 'bs': 'aggregate real-time technologies'}}, {'id': 10, 'name': 'Clementina DuBuque', 'username': 'Moriah.Stanton', 'email': 'Rey.Padberg@karina.biz', 'address': {'street': 'Kattie Turnpike', 'suite': 'Suite 198', 'city': 'Lebsackbury', 'zipcode': '31428-2261', 'geo': {'lat': '-38.2386', 'lng': '57.2232'}}, 'phone': '024-648-3804', 'website': 'ambrose.net', 'company': {'name': 'Hoeger LLC', 'catchPhrase': 'Centralized empowering task-force', 'bs': 'target end-to-end models'}}]</msg>
+<arg>${response.json()}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-04-09T15:52:47.984284" elapsed="0.001859"/>
+</kw>
+<status status="PASS" start="2026-04-09T15:52:47.748126" elapsed="0.238788"/>
+</test>
+<test id="s1-t2" name="Verify Get User By ID" line="11">
+<kw name="Init API Session" owner="EmployeeAPIKeywords">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2026-04-09T15:52:47.991098" level="INFO">Creating Session using : alias=api, url=http://jsonplaceholder.typicode.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>${session_name}</arg>
+<arg>${BASE_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2026-04-09T15:52:47.990776" elapsed="0.000639"/>
+</kw>
+<status status="PASS" start="2026-04-09T15:52:47.990130" elapsed="0.001433"/>
+</kw>
+<kw name="Get User By ID" owner="EmployeeAPIKeywords">
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2026-04-09T15:52:48.138805" level="INFO">GET Request : url=http://jsonplaceholder.typicode.com/users/1 
+ path_url=/users/1 
+ headers={'User-Agent': 'python-requests/2.33.1', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2026-04-09T15:52:48.139124" level="INFO">GET Response : url=http://jsonplaceholder.typicode.com/users/1 
+ status=200, reason=OK 
+ headers={'Date': 'Thu, 09 Apr 2026 10:22:48 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Credentials': 'true', 'Cache-Control': 'max-age=43200', 'Etag': 'W/"1fd-+2Y3G3w049iSZtw5t1mzSnunngE"', 'Expires': '-1', 'Nel': '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}', 'Pragma': 'no-cache', 'Report-To': '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=P2hWy0K5krV6HZV1zd6bUB3TODihd6pRVcpR6mTNjU4%3D\\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\\u0026ts=1775713384"}],"max_age":3600}', 'Reporting-Endpoints': 'heroku-nel="https://nel.heroku.com/reports?s=P2hWy0K5krV6HZV1zd6bUB3TODihd6pRVcpR6mTNjU4%3D&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;ts=1775713384"', 'Server': 'cloudflare', 'Vary': 'Origin, Accept-Encoding', 'Via': '1.1 heroku-router', 'X-Content-Type-Options': 'nosniff', 'X-Powered-By': 'Express', 'X-Ratelimit-Limit': '1000', 'X-Ratelimit-Remaining': '998', 'X-Ratelimit-Reset': '1775713433', 'Age': '16783', 'cf-cache-status': 'HIT', 'Content-Encoding': 'zstd', 'CF-RAY': '9e98caeecd7bbff9-BOM', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body={
+  "id": 1,
+  "name": "Leanne Graham",
+  "username": "Bret",
+  "email": "Sincere@april.biz",
+  "address": {
+    "street": "Kulas Light",
+    "suite": "Apt. 556",
+    "city": "Gwenborough",
+    "zipcode": "92998-3874",
+    "geo": {
+      "lat": "-37.3159",
+      "lng": "81.1496"
+    }
+  },
+  "phone": "1-770-736-8031 x56442",
+  "website": "hildegard.org",
+  "company": {
+    "name": "Romaguera-Crona",
+    "catchPhrase": "Multi-layered client-server neural-net",
+    "bs": "harness real-time e-markets"
+  }
+} 
+ </msg>
+<msg time="2026-04-09T15:52:48.139601" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>${session_name}</arg>
+<arg>${ENDPOINT_ID}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2026-04-09T15:52:47.993407" elapsed="0.146345"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2026-04-09T15:52:48.139957" elapsed="0.000143"/>
+</return>
+<msg time="2026-04-09T15:52:48.140593" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<status status="PASS" start="2026-04-09T15:52:47.992264" elapsed="0.148498"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2026-04-09T15:52:48.144126" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${response.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2026-04-09T15:52:48.141791" elapsed="0.002555"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-04-09T15:52:48.146689" level="INFO">{'id': 1, 'name': 'Leanne Graham', 'username': 'Bret', 'email': 'Sincere@april.biz', 'address': {'street': 'Kulas Light', 'suite': 'Apt. 556', 'city': 'Gwenborough', 'zipcode': '92998-3874', 'geo': {'lat': '-37.3159', 'lng': '81.1496'}}, 'phone': '1-770-736-8031 x56442', 'website': 'hildegard.org', 'company': {'name': 'Romaguera-Crona', 'catchPhrase': 'Multi-layered client-server neural-net', 'bs': 'harness real-time e-markets'}}</msg>
+<arg>${response.json()}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-04-09T15:52:48.145151" elapsed="0.001628"/>
+</kw>
+<status status="PASS" start="2026-04-09T15:52:47.988846" elapsed="0.159088"/>
+</test>
+<test id="s1-t3" name="Verify Create User" line="16">
+<kw name="Init API Session" owner="EmployeeAPIKeywords">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2026-04-09T15:52:48.153035" level="INFO">Creating Session using : alias=api, url=http://jsonplaceholder.typicode.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>${session_name}</arg>
+<arg>${BASE_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2026-04-09T15:52:48.152527" elapsed="0.001104"/>
+</kw>
+<status status="PASS" start="2026-04-09T15:52:48.151804" elapsed="0.002033"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2026-04-09T15:52:48.157015" level="INFO">${data} = {'name': 'John Doe', 'username': 'johndoe', 'email': 'john@example.com'}</msg>
+<var>${data}</var>
+<arg>name=John Doe</arg>
+<arg>username=johndoe</arg>
+<arg>email=john@example.com</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2026-04-09T15:52:48.155182" elapsed="0.001996"/>
+</kw>
+<kw name="Create User" owner="EmployeeAPIKeywords">
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2026-04-09T15:52:48.730876" level="INFO">POST Request : url=http://jsonplaceholder.typicode.com/users 
+ path_url=/users 
+ headers={'User-Agent': 'python-requests/2.33.1', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '72', 'Content-Type': 'application/json'} 
+ body=b'{"name": "John Doe", "username": "johndoe", "email": "john@example.com"}' 
+ </msg>
+<msg time="2026-04-09T15:52:48.731122" level="INFO">POST Response : url=http://jsonplaceholder.typicode.com/users 
+ status=201, reason=Created 
+ headers={'Date': 'Thu, 09 Apr 2026 10:22:48 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '92', 'Connection': 'keep-alive', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Expose-Headers': 'Location', 'Cache-Control': 'no-cache', 'Etag': 'W/"5c-4pgID3qZHPmVD+O5wzfs0MGP1cU"', 'Expires': '-1', 'Location': 'http://jsonplaceholder.typicode.com/users/11', 'Nel': '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}', 'Pragma': 'no-cache', 'Report-To': '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=Curbpj4H%2BtniL5uYTGIq3tltorHUtudWCtk6fNNfOrs%3D\\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\\u0026ts=1775730168"}],"max_age":3600}', 'Reporting-Endpoints': 'heroku-nel="https://nel.heroku.com/reports?s=Curbpj4H%2BtniL5uYTGIq3tltorHUtudWCtk6fNNfOrs%3D&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;ts=1775730168"', 'Server': 'cloudflare', 'Vary': 'Origin, X-HTTP-Method-Override, Accept-Encoding', 'Via': '1.1 heroku-router', 'X-Content-Type-Options': 'nosniff', 'X-Powered-By': 'Express', 'X-Ratelimit-Limit': '1000', 'X-Ratelimit-Remaining': '999', 'X-Ratelimit-Reset': '1775730173', 'cf-cache-status': 'DYNAMIC', 'CF-RAY': '9e98caef9a02c87d-BOM', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body={
+  "name": "John Doe",
+  "username": "johndoe",
+  "email": "john@example.com",
+  "id": 11
+} 
+ </msg>
+<msg time="2026-04-09T15:52:48.731409" level="INFO">${response} = &lt;Response [201]&gt;</msg>
+<var>${response}</var>
+<arg>${session_name}</arg>
+<arg>${ENDPOINT_ALL}</arg>
+<arg>json=${data}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2026-04-09T15:52:48.160442" elapsed="0.571032"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2026-04-09T15:52:48.731631" elapsed="0.000080"/>
+</return>
+<msg time="2026-04-09T15:52:48.732093" level="INFO">${response} = &lt;Response [201]&gt;</msg>
+<var>${response}</var>
+<arg>${data}</arg>
+<status status="PASS" start="2026-04-09T15:52:48.159256" elapsed="0.572910"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2026-04-09T15:52:48.734457" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${response.status_code}</arg>
+<arg>201</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2026-04-09T15:52:48.732890" elapsed="0.001694"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-04-09T15:52:48.736811" level="INFO">{'name': 'John Doe', 'username': 'johndoe', 'email': 'john@example.com', 'id': 11}</msg>
+<arg>${response.json()}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-04-09T15:52:48.735228" elapsed="0.001690"/>
+</kw>
+<status status="PASS" start="2026-04-09T15:52:48.150047" elapsed="0.587381"/>
+</test>
+<test id="s1-t4" name="Verify Update User" line="22">
+<kw name="Init API Session" owner="EmployeeAPIKeywords">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2026-04-09T15:52:48.740491" level="INFO">Creating Session using : alias=api, url=http://jsonplaceholder.typicode.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>${session_name}</arg>
+<arg>${BASE_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2026-04-09T15:52:48.740182" elapsed="0.000596"/>
+</kw>
+<status status="PASS" start="2026-04-09T15:52:48.739586" elapsed="0.001290"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2026-04-09T15:52:48.742257" level="INFO">${data} = {'name': 'Jane Doe', 'username': 'janedoe', 'email': 'jane@example.com'}</msg>
+<var>${data}</var>
+<arg>name=Jane Doe</arg>
+<arg>username=janedoe</arg>
+<arg>email=jane@example.com</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2026-04-09T15:52:48.741464" elapsed="0.000845"/>
+</kw>
+<kw name="Update User" owner="EmployeeAPIKeywords">
+<kw name="PUT On Session" owner="RequestsLibrary">
+<msg time="2026-04-09T15:52:49.260724" level="INFO">PUT Request : url=http://jsonplaceholder.typicode.com/users/1 
+ path_url=/users/1 
+ headers={'User-Agent': 'python-requests/2.33.1', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '72', 'Content-Type': 'application/json'} 
+ body=b'{"name": "Jane Doe", "username": "janedoe", "email": "jane@example.com"}' 
+ </msg>
+<msg time="2026-04-09T15:52:49.261499" level="INFO">PUT Response : url=http://jsonplaceholder.typicode.com/users/1 
+ status=200, reason=OK 
+ headers={'Date': 'Thu, 09 Apr 2026 10:22:49 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Credentials': 'true', 'Cache-Control': 'no-cache', 'Etag': 'W/"5b-EiFoPKM368O8BLZngNsg7uJrC3E"', 'Expires': '-1', 'Nel': '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}', 'Pragma': 'no-cache', 'Report-To': '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=Pp8s3MxY4UN8i1ddbw84plGNKQWI0YbKJ51e9XLvsWM%3D\\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\\u0026ts=1775730169"}],"max_age":3600}', 'Reporting-Endpoints': 'heroku-nel="https://nel.heroku.com/reports?s=Pp8s3MxY4UN8i1ddbw84plGNKQWI0YbKJ51e9XLvsWM%3D&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;ts=1775730169"', 'Server': 'cloudflare', 'Vary': 'Origin, Accept-Encoding', 'Via': '1.1 heroku-router', 'X-Content-Type-Options': 'nosniff', 'X-Powered-By': 'Express', 'X-Ratelimit-Limit': '1000', 'X-Ratelimit-Remaining': '998', 'X-Ratelimit-Reset': '1775730173', 'cf-cache-status': 'DYNAMIC', 'Content-Encoding': 'zstd', 'CF-RAY': '9e98caf2fe7277fc-BOM', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body={
+  "name": "Jane Doe",
+  "username": "janedoe",
+  "email": "jane@example.com",
+  "id": 1
+} 
+ </msg>
+<msg time="2026-04-09T15:52:49.261930" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>${session_name}</arg>
+<arg>/users/${user_id}</arg>
+<arg>json=${data}</arg>
+<doc>Sends a PUT request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2026-04-09T15:52:48.744221" elapsed="0.517777"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2026-04-09T15:52:49.262163" elapsed="0.000081"/>
+</return>
+<msg time="2026-04-09T15:52:49.262523" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>${data}</arg>
+<arg>1</arg>
+<status status="PASS" start="2026-04-09T15:52:48.742956" elapsed="0.519620"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2026-04-09T15:52:49.267525" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${response.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2026-04-09T15:52:49.263773" elapsed="0.004258"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-04-09T15:52:49.272820" level="INFO">{'name': 'Jane Doe', 'username': 'janedoe', 'email': 'jane@example.com', 'id': 1}</msg>
+<arg>${response.json()}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-04-09T15:52:49.270315" elapsed="0.002731"/>
+</kw>
+<status status="PASS" start="2026-04-09T15:52:48.738481" elapsed="0.536349"/>
+</test>
+<test id="s1-t5" name="Verify Delete User" line="28">
+<kw name="Init API Session" owner="EmployeeAPIKeywords">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2026-04-09T15:52:49.280686" level="INFO">Creating Session using : alias=api, url=http://jsonplaceholder.typicode.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>${session_name}</arg>
+<arg>${BASE_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2026-04-09T15:52:49.280045" elapsed="0.001265"/>
+</kw>
+<status status="PASS" start="2026-04-09T15:52:49.279003" elapsed="0.002689"/>
+</kw>
+<kw name="Delete User" owner="EmployeeAPIKeywords">
+<kw name="DELETE On Session" owner="RequestsLibrary">
+<msg time="2026-04-09T15:52:49.745236" level="INFO">DELETE Request : url=http://jsonplaceholder.typicode.com/users/1 
+ path_url=/users/1 
+ headers={'User-Agent': 'python-requests/2.33.1', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '0'} 
+ body=None 
+ </msg>
+<msg time="2026-04-09T15:52:49.745463" level="INFO">DELETE Response : url=http://jsonplaceholder.typicode.com/users/1 
+ status=200, reason=OK 
+ headers={'Date': 'Thu, 09 Apr 2026 10:22:49 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '2', 'Connection': 'keep-alive', 'Access-Control-Allow-Credentials': 'true', 'Cache-Control': 'no-cache', 'Etag': 'W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"', 'Expires': '-1', 'Nel': '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}', 'Pragma': 'no-cache', 'Report-To': '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=Pp8s3MxY4UN8i1ddbw84plGNKQWI0YbKJ51e9XLvsWM%3D\\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\\u0026ts=1775730169"}],"max_age":3600}', 'Reporting-Endpoints': 'heroku-nel="https://nel.heroku.com/reports?s=Pp8s3MxY4UN8i1ddbw84plGNKQWI0YbKJ51e9XLvsWM%3D&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;ts=1775730169"', 'Server': 'cloudflare', 'Vary': 'Origin, Accept-Encoding', 'Via': '1.1 heroku-router', 'X-Content-Type-Options': 'nosniff', 'X-Powered-By': 'Express', 'X-Ratelimit-Limit': '1000', 'X-Ratelimit-Remaining': '997', 'X-Ratelimit-Reset': '1775730173', 'cf-cache-status': 'DYNAMIC', 'CF-RAY': '9e98caf63c740b2c-BOM', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body={} 
+ </msg>
+<msg time="2026-04-09T15:52:49.745946" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>${session_name}</arg>
+<arg>/users/${user_id}</arg>
+<doc>Sends a DELETE request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2026-04-09T15:52:49.286042" elapsed="0.459994"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2026-04-09T15:52:49.746196" elapsed="0.000107"/>
+</return>
+<msg time="2026-04-09T15:52:49.746696" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>1</arg>
+<status status="PASS" start="2026-04-09T15:52:49.283568" elapsed="0.463202"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2026-04-09T15:52:49.749297" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${response.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2026-04-09T15:52:49.747658" elapsed="0.001794"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-04-09T15:52:49.751692" level="INFO">{}</msg>
+<arg>${response.json()}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-04-09T15:52:49.750125" elapsed="0.001698"/>
+</kw>
+<status status="PASS" start="2026-04-09T15:52:49.276774" elapsed="0.475745"/>
+</test>
+<status status="PASS" start="2026-04-09T15:52:46.862962" elapsed="2.890925"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test Employee" id="s1" pass="5" fail="0" skip="0">Test Employee</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
