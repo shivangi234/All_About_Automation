@@ -6,7 +6,21 @@ Resource    ../PageObjects/Locators.robot
 *** Keywords ***
 Open SauceLab Browser
     [Arguments]    ${Browser}
-    Open Browser    ${URL}    ${Browser}
+
+    ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
+
+    # Add arguments
+    Call Method    ${options}    add_argument    --incognito
+    Call Method    ${options}    add_argument    --start-maximized
+
+    # Disable password manager
+    ${prefs}=    Create Dictionary
+    ...    credentials_enable_service=False
+    ...    profile.password_manager_enabled=False
+
+    Call Method    ${options}    add_experimental_option    prefs    ${prefs}
+
+    Open Browser    ${URL}    ${Browser}    options=${options}
     Maximize Browser Window
 
 Get Credentials From Page
@@ -20,6 +34,9 @@ Get Credentials From Page
     ${password}=    Set Variable    ${pass_lines}[1]
 
     RETURN    ${username}    ${password}
+
+
+
 Enter Username
         [Arguments]     ${username}
         Wait Until Element Is Visible    ${TXT_USER_NAME}   5s

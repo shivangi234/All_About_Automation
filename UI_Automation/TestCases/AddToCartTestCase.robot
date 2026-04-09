@@ -10,7 +10,6 @@ ${postalcode}   411067
 *** Test Cases ***
 Valid Login Test
         Open SauceLab Browser    ${Browser}
-
         ${username}    ${password}=    Get Credentials From Page
         Enter Username    ${username}
         Enter Password    ${password}
